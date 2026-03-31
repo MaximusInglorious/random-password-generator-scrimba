@@ -19,6 +19,7 @@ let resultElements = document.getElementsByClassName("result");
 let cbxNumbers = document.getElementById("cbx-numbers");
 let cbxSymbols = document.getElementById("cbx-symbols");
 let resultsContainer = document.getElementById("results-container");
+let btnThemeSwitcher = document.getElementById("theme-switcher");
 
 let passwordLength = 15;
 let includeNumbers = false, includeSymbols = false;
@@ -31,6 +32,7 @@ inpPwdLength.addEventListener("focusout", enforceInputLimits);
 cbxNumbers.addEventListener("change", () => { includeNumbers = !includeNumbers });
 cbxSymbols.addEventListener("change", () => { includeSymbols = !includeSymbols });
 resultsContainer.addEventListener("click", copyTextToClipboard);
+btnThemeSwitcher.addEventListener("click", toggleDarkTheme);
 
 
 function generateRandomPassword() {
@@ -107,4 +109,9 @@ function copyTextToClipboard(event) {
                 isCopying = false;
             });
     }
+}
+
+function toggleDarkTheme(event) {
+    let isDarkTheme = document.body.classList.toggle('dark-theme');
+    event.currentTarget.textContent = (isDarkTheme) ? "☀️" : "🌑";
 }
