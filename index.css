@@ -10,13 +10,13 @@
 }
 
 .dark-theme {
-  --body-background-color: #1F2937;
+  --body-background-color: #1f2937;
   --primary-color: #10b981;
   --normal-text-color: #d5d4d8;
   --emphasized-text-color: #fff;
-  --line-color: #2F3E53;
+  --line-color: #2f3e53;
   --result-background-color: #273549;
-  --result-text-color: #55F991;
+  --result-text-color: #55f991;
   --input-background-color: #111827;
 }
 
@@ -29,7 +29,19 @@ body {
   font-family: sans-serif;
 }
 
+#outer-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-background-color);
+  transition: background-color 0.3s ease;
+}
+
 #main-content {
+  max-width: 35rem;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +50,14 @@ body {
   background-color: var(--body-background-color);
   transition: background-color 0.3s ease;
   padding: 0 3.25rem;
+  border-radius: 6px;
+  /* border: 1px solid var(--primary-color); */
+  border: 4px dashed var(--line-color);
+  transition: border-color 0.3s ease;
+}
+
+#main-content:hover {
+  border-color: var(--primary-color);
 }
 
 #top-container {
@@ -156,7 +176,10 @@ body {
   color: var(--normal-text-color);
   font-family: "Inter", sans-serif;
   background-color: var(--input-background-color);
-  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease;
   width: 3rem;
 }
 
@@ -176,7 +199,9 @@ body {
   border-radius: 6px;
   aspect-ratio: 1 / 1;
   width: 1.5rem;
-  transition: border-color 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .settings-container input[type="checkbox"]:hover {

@@ -12,40 +12,42 @@
     />
   </head>
   <body>
-    <div id="main-content">
-      <div id="top-container">
-        <h1>
-          Generate a <br />
-          <span>random password</span>
-        </h1>
-        <button id="theme-switcher">🌑</button>
-      </div>
-      <p>Never use an insecure password again.</p>
-      <section id="settings-section">
-        <h3>Preferences</h3>
-        <div class="settings-container">
-          <label for="numip-pwd-length">Length</label>
-          <input
-            type="number"
-            name="pwd-length"
-            id="numip-pwd-length"
-            min="8"
-            max="24"
-          />
-          <label for="cbx-numbers">Numbers</label>
-          <input type="checkbox" name="includeNumbers" id="cbx-numbers" />
-          <label for="cbx-symbols">Symbols</label>
-          <input type="checkbox" name="includeSymbols" id="cbx-symbols" />
+    <div id="outer-container">
+      <div id="main-content">
+        <div id="top-container">
+          <h1>
+            Generate a <br />
+            <span>random password</span>
+          </h1>
+          <button id="theme-switcher">🌑</button>
         </div>
-      </section>
-      <button id="btn-generate">Generate passwords</button>
-      <hr />
-      <div id="results-container">
-        <div class="result-container">
-          <span class="result"></span>
-        </div>
-        <div class="result-container">
-          <span class="result"></span>
+        <p>Never use an insecure password again.</p>
+        <section id="settings-section">
+          <h3>Preferences</h3>
+          <div class="settings-container">
+            <label for="numip-pwd-length">Length</label>
+            <input
+              type="number"
+              name="pwd-length"
+              id="numip-pwd-length"
+              min="8"
+              max="24"
+            />
+            <label for="cbx-numbers">Numbers</label>
+            <input type="checkbox" name="includeNumbers" id="cbx-numbers" />
+            <label for="cbx-symbols">Symbols</label>
+            <input type="checkbox" name="includeSymbols" id="cbx-symbols" />
+          </div>
+        </section>
+        <button id="btn-generate">Generate passwords</button>
+        <hr />
+        <div id="results-container">
+          <div class="result-container">
+            <span class="result"></span>
+          </div>
+          <div class="result-container">
+            <span class="result"></span>
+          </div>
         </div>
       </div>
     </div>
